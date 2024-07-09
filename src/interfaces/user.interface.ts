@@ -1,9 +1,8 @@
 export interface userSingUpInterface {
-    name: string;
-    email: string;
+    username: string;
     password: string;
 }
 export interface userSingInInterface {
-    email: string;
+    username: string;
     password: string;
 }

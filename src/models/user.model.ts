@@ -2,7 +2,7 @@ import { DataType } from "sequelize-typescript";
 import { sequelize } from "../configs/db.config";
 
 const User = sequelize.define('User', {
-    user: {
+    username: {
         type: DataType.STRING,
         allowNull: false
     },
