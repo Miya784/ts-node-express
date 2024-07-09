@@ -30,3 +30,5 @@ Status.belongsTo(Device,{
     foreignKey: 'device_type',
     targetKey: 'device_type'
 });
+
+export { Status };

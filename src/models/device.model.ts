@@ -2,21 +2,23 @@ import { DataType } from "sequelize-typescript";
 import { sequelize } from "../configs/db.config";
 import  {User}  from "./user.model";
 
-const Device = sequelize.define('DeviceID', {
+const Device = sequelize.define('Device', {
     userId: {
         type: DataType.INTEGER,
         allowNull: false
     },
     device_id: {
         type: DataType.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
     },
     device_type: {
         type: DataType.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
     }
     },{
-        tableName: 'device_ids',
+        tableName: 'devices',
         paranoid: true,
     }
 );
