@@ -1,4 +1,9 @@
 # ts-node-express
 ### Development
 
-```bash```
+```bash
+yarn
+yarn run build
+# dev
+yarn dev
+```
