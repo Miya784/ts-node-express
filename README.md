@@ -2,7 +2,9 @@
 ### Development
 
 ```bash
+# Install dependencies:
 yarn
+# Build the project:
 yarn run build
 # dev
 yarn dev
