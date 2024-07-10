@@ -65,7 +65,8 @@ const Signin = async (req: Request, res: Response) => {
                 
         return res.status(200).json({
             message: "User logged in successfully",
-            token: token
+            accessToken: token.accessToken,
+            refreshToken: token.refreshToken
         });
     } catch (error) {
         return res.status(500).json({
