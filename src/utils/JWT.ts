@@ -14,7 +14,7 @@ export function generateToken(user: jwtPayload): { accessToken: string | null, r
     };
 
     const accessTokenOptions:SignOptions = {
-        expiresIn: '1d',
+        expiresIn: '50sec',
         algorithm: 'HS256',
         issuer: 'your-website.com',
         jwtid: String(user.id),

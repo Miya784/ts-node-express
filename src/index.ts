@@ -4,8 +4,11 @@ import { sync } from './models/index.model';
 import * as swaggerUi from "swagger-ui-express";
 import * as fs from "fs";
 
+const cors = require('cors');
+
+
 const app = express();
-const port = 3000;
+const port = 4000;
 
 // swagger docs
 if (process.env.NODE_ENV != "production") {
@@ -15,6 +18,10 @@ if (process.env.NODE_ENV != "production") {
   const swaggerDocument = JSON.parse(swaggerData);
   app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument, undefined, undefined, customCss));
 }
+
+app.use(cors({
+  origin: 'http://localhost:3000', // อนุญาตให้โดเมนนี้ทำการเข้าถึง
+}));
 
 app.use('/',router);
 
